@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.scenebuilder.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="430.0" layoutX="87.0" layoutY="-19.0" stroke="WHITE" strokeType="INSIDE" width="428.0" />
+      <Text fill="WHITE" layoutX="219.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN IN" textAlignment="CENTER" wrappingWidth="162.9367561340332">
+         <font>
+            <Font name="Impact" size="42.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="300.0" layoutX="124.0" layoutY="100.0" stroke="WHITE" strokeType="INSIDE" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" width="353.0" />
+      <VBox layoutX="189.0" layoutY="140.0" prefHeight="114.0" prefWidth="222.0">
+         <children>
+            <HBox prefHeight="21.0" prefWidth="486.0">
+               <children>
+                  <ImageView fx:id="usernameIco" fitHeight="27.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="9.5" top="7.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../../../img/clipart--person-icon--cliparts-15.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="usernameField" prefHeight="26.0" prefWidth="187.0" promptText="Username">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="19.0" prefWidth="486.0">
+               <children>
+                  <ImageView fx:id="passwordIco" fitHeight="27.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/61457.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="-3.0" right="6.0" top="7.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <PasswordField fx:id="passwordField" prefHeight="26.0" prefWidth="188.0" promptText="Password">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="23.0">
+               <children>
+                  <CheckBox fx:id="rememberMeCB" mnemonicParsing="false" text="Remember me" />
+                  <Label fx:id="forgotPasswordLB" onMouseEntered="#forgotPasswordLBEnterHandler" onMouseExited="#forgotPasswordLBExitHandler" text="Forgot Password?">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="7.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="btnLogin" mnemonicParsing="false" onMouseClicked="#loginBtnHandler" prefHeight="26.0" prefWidth="218.0" text="Login">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="txtLoginResult" text="Label" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

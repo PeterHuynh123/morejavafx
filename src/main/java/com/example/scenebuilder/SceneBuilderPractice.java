@@ -8,10 +8,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SceneBuilderPractice extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SceneBuilderPractice.class.getResource("practiceFXML.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        fxmlLoader = new FXMLLoader(SceneBuilderPractice.class.getResource("hello-view.fxml"));
+        Scene scene2 = new Scene(fxmlLoader.load(), 600, 400);
+
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
